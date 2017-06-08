@@ -38,7 +38,7 @@ router.use(function (req, res, next) {
             if (redirect) {
                 // 301 redirect to new url
                 return res.redirect(301, redirect.to);
-            } 
+            }
 
             next();
         })
@@ -55,7 +55,7 @@ router.use(function (req, res, next) {
     vm.loggedIn = !!req.session.token;
     vm.domain = req.protocol + '://' + req.get('host');
     vm.url = vm.domain + req.path;
-    vm.googleAnalyticsAccount = config.googleAnalyticsAccount;
+  //  vm.googleAnalyticsAccount = config.googleAnalyticsAccount;
 
     postService.getAll()
         .then(function (posts) {
@@ -294,14 +294,14 @@ router.get('/contact-thanks', function (req, res, next) {
 ---------------------------------------*/
 
 // google analytics
-router.get('/analytics.js', function (req, res, next) {
-    proxy('http://www.google-analytics.com/analytics.js', basePath + '/_content/analytics.js', req, res);
-});
-
-// carbon ads
-router.get('/carbonads.js', function (req, res, next) {
-    proxy('http://cdn.carbonads.com/carbon.js', basePath + '/_content/carbonads.js', req, res);
-});
+// router.get('/analytics.js', function (req, res, next) {
+//     proxy('http://www.google-analytics.com/analytics.js', basePath + '/_content/analytics.js', req, res);
+// });
+//
+// // carbon ads
+// router.get('/carbonads.js', function (req, res, next) {
+//     proxy('http://cdn.carbonads.com/carbon.js', basePath + '/_content/carbonads.js', req, res);
+// });
 
 module.exports = router;
 

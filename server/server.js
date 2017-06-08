@@ -44,7 +44,7 @@ app.use('/api/redirects', require('./controllers/api/redirects.controller'));
 app.use('/api/users', require('./controllers/api/users.controller'));
 
 // make JWT token available to angular app
-app.get('/token', function (req, res) { 
+app.get('/token', function (req, res) {
     res.send(req.session.token);
 });
 

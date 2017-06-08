@@ -29,8 +29,8 @@ gulp.task('scripts', function () {
     function compileScripts(app) {
         // include all .js files except for a couple of folders
         return gulp.src([
-                basePath + '/' + app + '/**/*.js', 
-                '!' + basePath + '/' + app + '/_content/**/*.js', 
+                basePath + '/' + app + '/**/*.js',
+                '!' + basePath + '/' + app + '/_content/**/*.js',
                 '!' + basePath + '/' + app + '/_dist/**/*.js'
             ])
             .pipe(ngAnnotate())

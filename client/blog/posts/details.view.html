@@ -8,7 +8,7 @@
             <p>By MEANie Demo</p>
             <% if(locals.postTags && locals.postTags.length) { %>
                 <p>
-                    Tags: 
+                    Tags:
                     <%- locals.postTags.map(function(tag) { return '<a href="/posts/tag/' + tag.slug + '">' + tag.text + '</a>'; }).join(', ') %>
                 </p>
             <% } %>
@@ -22,7 +22,7 @@
         <hr />
 
         <!-- comments -->
-        <div id="disqus_thread"></div>
+        <!-- <div id="disqus_thread"></div>
         <script>
             // update page title
             var metaTitle = '<%- locals.metaTitle.replace(/\'/g, "\\\'") %>';
@@ -49,6 +49,6 @@
                     config: disqus_config
                 });
             }
-        </script>
+        </script> -->
     </div>
 </div>
